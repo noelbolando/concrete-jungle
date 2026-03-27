@@ -12,6 +12,9 @@ Since our project proposal, we identified a source to estimate the cement intens
 ## Calculating Cement Imports for Use in the Building Sector: 
 Using this data in tandem with our joined PLUTO/OD data, we will be able to estimate how much cement is used in each building in NYC.
 
+## NYC Cement Imports:
+<img width="699" height="310" alt="Screenshot 2026-03-27 at 4 29 55 PM" src="https://github.com/user-attachments/assets/a5b96b6b-cdb8-44f7-9f68-3bbf1561394a" />
+
 ## Material Intensities:
 <img width="660" height="156" alt="Screenshot 2026-03-27 at 4 25 01 PM" src="https://github.com/user-attachments/assets/f5160cf1-40a2-4225-b5a1-13dfaede4e17" />
 
