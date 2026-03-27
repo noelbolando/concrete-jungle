@@ -1,0 +1,14 @@
+# NYC’s Building Footprint
+
+## Building Data Initial Exploration: 
+The data we collected for calculating building volume for all buildings in New York City (NYC) includes a shapefile from the NYC Opendata (OD) site which includes the following data for all buildings in NYC: building area, building height, year built, and built bureau-block-lot (BBL). A BBL (Bureau Block Lot) is a unique, 10-digit ID number that shows every piece of property in NYC. Each BBL can contain multiple buildings, thus not every building falls within the same building class. Each dataset was loaded into PyCharm and standard cleaning methods were applied (i.e., removing NaN values, etc.) Of the ~1 million rows of data, some were removed due to invalid data. We noticed that while the OD contained measurements per building, it lacked building classification types (i.e. residential, nonresidential, etc.). 
+
+There was an additional dataset (Primary Land Use Tax Lot Output or PLUTO) which contained building classification types. PLUTO data was not aggregated at the level of the individual building, unlike the OD data. Therefore, we decided to join the datasets to determine our building stock across every building in NYC.
+
+## Building Classifications and Dataframe Merging: 
+We merged our datasets together through the “BBL” column, which is identical between our datasets. For PLUTO data, it is assumed that the primary building of each BBL was selected for building classifications. By merging the two datasets, based on the BBL ID, we identified each major building type per BBL for every building in NYC. However, we determined that they were too specific for our needs (e.g. a walkup apartment, religious institution, office space). 
+
+We reclassified the categories into three new building type classes: “residential single family,” “residential multifamily,” and “nonresidential.” We did this to align with three classifications we found for concrete intensities, which we will discuss later. We also classified these building types as “private” and “public” buildings to use when modeling our sustainability intervention, which analyzes a public procurement policy. We noted that we need to remove some building classifications (e.g., parks) so our final building volume is not skewed. We will remove these classes before rendering our model to retain relevant building class categories.
+
+## Calculating Building Volume: 
+Building volumes were calculated from the OD dataset by reprojecting the coordinate system to ESPG 2263, which is NAD83. This was necessary because the original NYC OD dataset was in a non-area-preserving coordinate system, which was distorting building footprint measurements. We obtained the building footprint area by using the GeoPandas library. These footprint values were multiplied by the building height to get the building volume in cubic feet.
