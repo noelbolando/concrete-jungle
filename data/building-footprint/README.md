@@ -12,3 +12,5 @@ We reclassified the categories into three new building type classes: “resident
 
 ## Calculating Building Volume: 
 Building volumes were calculated from the OD dataset by reprojecting the coordinate system to ESPG 2263, which is NAD83. This was necessary because the original NYC OD dataset was in a non-area-preserving coordinate system, which was distorting building footprint measurements. We obtained the building footprint area by using the GeoPandas library. These footprint values were multiplied by the building height to get the building volume in cubic feet.
+
+
