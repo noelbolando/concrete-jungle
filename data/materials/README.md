@@ -20,3 +20,6 @@ Using this data in tandem with our joined PLUTO/OD data, we will be able to esti
 
 <img width="660" height="285" alt="Screenshot 2026-03-27 at 4 25 17 PM" src="https://github.com/user-attachments/assets/1b1379e9-b41b-4969-b899-95f148f0f006" />
 
+## Buy Clean Concrete Material Guidelines:
+<img width="664" height="350" alt="Screenshot 2026-03-27 at 4 32 39 PM" src="https://github.com/user-attachments/assets/26a81c4e-0801-4334-92e9-26500b368e5f" />
+
