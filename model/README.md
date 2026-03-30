@@ -9,4 +9,3 @@ The second scenario will be calibrated by reducing the cement intensity per buil
 
 The following image provides a visual roadmap that will guide our deliverables for the first project presentation:
 <img width="541" height="670" alt="Screenshot 2026-03-27 at 4 48 35 PM" src="https://github.com/user-attachments/assets/681ab2d3-a78c-48ee-8cf7-eb61c57f4742" />
-

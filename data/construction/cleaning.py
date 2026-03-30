@@ -14,10 +14,13 @@ import geopandas as gpd
 import pandas as pd
 
 # load permit data
-permits=pd.read_csv(" ") # add construction data here
+permits = pd.read_csv(
+    "/Users/nboland/Projects/concrete-jungle/data/construction/DOB_Job_Application_Filings_20260329.csv",
+    low_memory=False
+)
 
 # importing footprint dataset that has BBL and volume data
-pluto = gpd.read_file(" ") # add footprint data here
+pluto = gpd.read_file("/Users/nboland/Projects/concrete-jungle/model/data/nyc_data.5.12.gpkg")
 print(pluto.columns.tolist())
 print(pluto.shape)
 
@@ -189,6 +192,7 @@ pluto_agg = pluto.groupby("BASE_BBL").agg(
     bldgclass=("bldgclass", "first"),
     bldg_type=("bldg_type", "first"),
     broad_bldg_type=("broad_bldg_type", "first"),
+    ownership_type=("ownership_type", "first"),
     volume=("volume", "sum"),
     footprint_area_sqft=("footprint_area_sqft", "sum"),
     numfloors=("numfloors", "max"),
@@ -223,4 +227,6 @@ print("Unmatched permits by year:")
 print(pd.to_datetime(unmatched["Pre- Filing Date"]).dt.year.value_counts().sort_index()) #unmatched records are mostly historical permits, could be demolished, merged, subdivided, or renumbered over the past 20+ years
 
 # export before date filtering
-joined.to_csv(" ", index=False) # add an export path here
+out_path = "/Users/nboland/Projects/concrete-jungle/model/data/nb_permits_clean_2025.csv"
+joined.to_csv(out_path, index=False)
+print(f"\nSaved to {out_path}")

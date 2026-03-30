@@ -16,8 +16,11 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 
 # load data
-demo=pd.read_csv(" ") # add demolition data there
-pluto = gpd.read_file(" ") # add pluto data here
+demo = pd.read_csv(
+    "/Users/nboland/Projects/concrete-jungle/data/demolition/NYC_Demolition_Building_20260316 (1).csv",
+    low_memory=False
+)
+pluto = gpd.read_file("/Users/nboland/Projects/concrete-jungle/model/data/nyc_data.5.12.gpkg")
 
 # create a filter for only demolitions
 dm = demo[demo["Job Type"] == "DM"].copy()
@@ -134,3 +137,37 @@ print(joined_demo["broad_bldg_type"].value_counts())
 # residential_multifamily      29984
 # residential_single_family    11399
 # nonresidential                6958
+
+# consolidate broad_bldg_type and ownership_type:
+# prefer PLUTO values where the BIN matched, fall back to permit-derived values
+joined_demo["broad_bldg_type"] = joined_demo["broad_bldg_type"].fillna(
+    joined_demo["broad_bldg_type_permits"]
+)
+joined_demo["ownership_type"] = joined_demo["bldg_type"].map({
+    'single_family': 'private', 'two_family': 'private',
+    'walkup_apartment': 'private', 'elevator_apartment': 'private',
+    'warehouse': 'private', 'factory_industrial': 'private',
+    'garage': 'private', 'hotel': 'private', 'hospital_health': 'private',
+    'theatre': 'private', 'retail_store': 'private', 'loft': 'private',
+    'religious': 'private', 'asylum_home': 'private', 'office': 'private',
+    'public_assembly': 'private', 'outdoor_recreation': 'public',
+    'condominium': 'private', 'mixed_use_residential': 'private',
+    'transportation': 'public', 'utility': 'public', 'vacant': 'public',
+    'educational': 'public', 'government': 'public', 'miscellaneous': 'public',
+}).fillna(joined_demo["ownership_type_permits"])
+
+# exclude Breezy Point outlier (BBL 4163500400):
+# cooperative where 1,877 SFH share one BBL — Hurricane Sandy rebuilds inflate Queens SFH volume
+joined_demo = joined_demo[joined_demo["BBL"] != "4163500400"].copy()
+print(f"\nAfter Breezy Point exclusion: {len(joined_demo):,}")
+
+print("\nFinal broad_bldg_type distribution:")
+print(joined_demo["broad_bldg_type"].value_counts())
+print("\nFinal ownership_type distribution:")
+print(joined_demo["ownership_type"].value_counts())
+print(f"\nVolume nulls (unmatched BINs): {joined_demo['volume'].isna().sum():,}")
+
+# export
+out_path = "/Users/nboland/Projects/concrete-jungle/model/data/dm_permits_clean.csv"
+joined_demo.to_csv(out_path, index=False)
+print(f"\nSaved to {out_path}")
