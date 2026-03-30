@@ -60,7 +60,9 @@ RASMI_INTENSITIES = {
 CEMENT_FRACTIONS = {
     2500: {"portland_kg_m3": 210, "total_cementitious_kg_m3": 248},
     3000: {"portland_kg_m3": 234, "total_cementitious_kg_m3": 287},
+    3500: {"portland_kg_m3": 258, "total_cementitious_kg_m3": 316},
     4000: {"portland_kg_m3": 282, "total_cementitious_kg_m3": 345},
+    4500: {"portland_kg_m3": 312, "total_cementitious_kg_m3": 383},
     5000: {"portland_kg_m3": 342, "total_cementitious_kg_m3": 421},
     6000: {"portland_kg_m3": 362, "total_cementitious_kg_m3": 445},
     8000: {"portland_kg_m3": 427, "total_cementitious_kg_m3": 533},
@@ -86,7 +88,9 @@ CEMENT_FRACTION_BY_TYPE = {
 BAU_GWP = {
     2500: 239.73,
     3000: 263.52,
+    3500: 288.86,
     4000: 314.20,
+    4500: 346.12,
     5000: 378.03,
     6000: 399.27,
     8000: 471.52,
@@ -102,7 +106,9 @@ BAU_GWP_BY_TYPE = {
 BUY_CLEAN_GWP = {
     2500: 360,
     3000: 395,
+    3500: 433,
     4000: 471,
+    4500: 520,
     5000: 568,
     6000: 599,
     8000: 707,

@@ -117,7 +117,7 @@ def make_figure(gdf: gpd.GeoDataFrame) -> plt.Figure:
 
     ax.set_axis_off()
     ax.set_title(
-        "Embodied Carbon in New York City's Built Environment",
+        "Embodied Carbon in New York City's Built Environment (2026)",
         fontsize=16, fontweight="bold", pad=8,
     )
 
