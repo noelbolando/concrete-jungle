@@ -209,7 +209,7 @@ def main():
 
     # Phase 2 — forecast
     print("\n[Phase 2] Forecast (2024–2033)")
-    p2 = run_phase2(p1["nb"])
+    p2 = run_phase2(p1["nb"], p1["dm"], p1["building_stock"])
 
     # Phase 3 — Monte Carlo
     from constants import N_SIMULATIONS

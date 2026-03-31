@@ -10,8 +10,8 @@ Approach:
     3. Allocate projected GFA by building type using the historical type mix
        (% RS / RM / NR per year, averaged over the permit record).
     4. Apply Buy Clean policy filter:
-         - From 2025 onwards, public buildings use Buy Clean GWP.
-         - Private buildings remain at BAU GWP throughout.
+         - From BUY_CLEAN_START_YEAR onwards, ALL buildings use Buy Clean GWP.
+         - BAU scenario keeps NRMCA Eastern region GWP throughout.
     5. Calculate embodied carbon for each scenario using median RASMI intensities.
 
 Key outputs
@@ -213,7 +213,7 @@ def forecast_embodied_carbon(
     """
     Calculate embodied carbon for BAU and Buy Clean scenarios.
 
-    Buy Clean applies to public buildings from BUY_CLEAN_START_YEAR.
+    Buy Clean applies to ALL buildings from BUY_CLEAN_START_YEAR.
     Uses median RASMI cement intensities.
 
     Returns a long DataFrame:
@@ -234,8 +234,8 @@ def forecast_embodied_carbon(
             if scenario == "BAU":
                 gwp = BAU_GWP_BY_TYPE[btype]
             else:
-                # Buy Clean: public buildings from 2025; private always BAU
-                if own == "public" and yr >= BUY_CLEAN_START_YEAR:
+                # Buy Clean: all buildings from BUY_CLEAN_START_YEAR
+                if yr >= BUY_CLEAN_START_YEAR:
                     gwp = BUY_CLEAN_GWP_BY_TYPE[btype]
                 else:
                     gwp = BAU_GWP_BY_TYPE[btype]
@@ -310,7 +310,8 @@ def building_forecast_carbon(
             if scenario == "BAU":
                 gwp = BAU_GWP_BY_TYPE[btype]
             else:
-                if own == "public" and yr >= BUY_CLEAN_START_YEAR:
+                # Buy Clean: all buildings from BUY_CLEAN_START_YEAR
+                if yr >= BUY_CLEAN_START_YEAR:
                     gwp = BUY_CLEAN_GWP_BY_TYPE[btype]
                 else:
                     gwp = BAU_GWP_BY_TYPE[btype]
@@ -393,7 +394,7 @@ def fit_dm_regression(dm: pd.DataFrame) -> dict:
 def project_dm(
         dm_regression: dict,
         forecast_years: range = None,
-        onfidence: float = 0.90,
+        confidence: float = 0.90,
     ) -> pd.DataFrame:
     """
     Project annual demolition volume (m³) for forecast years with prediction intervals.
