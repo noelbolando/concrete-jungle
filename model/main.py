@@ -45,12 +45,16 @@ BTYPE_COLORS = {
 SCENARIO_COLORS = {"BAU": "#e15759", "BuyClean": "#4e79a7"}
 
 # Create Chart 1: Historical building stock
-def plot_stock(stock_ts: pd.DataFrame):
+def plot_stock(stock_ts: pd.DataFrame, start_year: int = 2001, end_year: int = 2023):
     fig, ax = plt.subplots(figsize=(12, 5))
     btypes = ["residential_single_family", "residential_multifamily", "nonresidential"]
 
     for btype in btypes:
-        sub = stock_ts[stock_ts["broad_bldg_type"] == btype].sort_values("year")
+        sub = stock_ts[
+            (stock_ts["broad_bldg_type"] == btype) &
+            (stock_ts["year"] >= start_year) &
+            (stock_ts["year"] <= end_year)
+        ].sort_values("year")
         ax.plot(
             sub["year"], sub["stock_m3"] / 1e6,
             label=BTYPE_LABELS[btype],
@@ -58,14 +62,15 @@ def plot_stock(stock_ts: pd.DataFrame):
             linewidth=2,
         )
 
-    ax.set_title("NYC Concrete Building Stock (2001–2023)", fontsize=14, fontweight="bold")
+    ax.set_title(f"NYC Concrete Building Stock ({start_year}–{end_year})", fontsize=14, fontweight="bold")
     ax.set_xlabel("Year")
     ax.set_ylabel("Building Volume (million m³)")
     ax.legend()
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:,.0f}"))
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
-    path = os.path.join(OUTPUT_DIR, "01_historical_stock.png")
+    suffix = f"_{start_year}_{end_year}" if (start_year, end_year) != (2001, 2023) else ""
+    path = os.path.join(OUTPUT_DIR, f"01_historical_stock{suffix}.png")
     fig.savefig(path, dpi=150)
     plt.close(fig)
     print(f"Saved: {path}")
@@ -223,6 +228,7 @@ def main():
     # Charts
     print("\n[Charts] Generating output charts...")
     plot_stock(p1["stock_ts"])
+    plot_stock(p1["stock_ts"], start_year=2012, end_year=2023)
     plot_historical_carbon(p1["carbon_ts"])
     plot_scenario_comparison(mc["summary"])
     plot_carbon_avoided(mc["carbon_avoided"])

@@ -80,7 +80,7 @@ def make_figure(gdf: gpd.GeoDataFrame) -> plt.Figure:
     colors = cmap(norm(log_c))
     sizes = np.clip(np.sqrt(gdf["gfa_m2"].values) * 0.03, 0.2, 4.0)
     fig, ax = plt.subplots(figsize=(14, 16), dpi=200)
-    ax.set_facecolor("#f5f5f0")
+    ax.set_facecolor("none")
 
     # Draw dots sorted by carbon so high-carbon buildings render on top
     order = np.argsort(log_c)
@@ -110,7 +110,7 @@ def make_figure(gdf: gpd.GeoDataFrame) -> plt.Figure:
     # White-out everything outside the borough boundaries
     big = shapely_box(minx - 200_000, miny - 200_000, maxx + 200_000, maxy + 200_000)
     outside = big.difference(nyc_poly)
-    gpd.GeoSeries([outside], crs="EPSG:3857").plot(ax=ax, color="white", zorder=5)
+    gpd.GeoSeries([outside], crs="EPSG:3857").plot(ax=ax, color="none", zorder=5)
 
     # Draw borough boundary outlines on top of the mask
     nyc.boundary.plot(ax=ax, color="#aaaaaa", linewidth=0.5, zorder=6)
@@ -158,7 +158,7 @@ def main():
     fig = make_figure(gdf)
 
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    fig.savefig(OUTPUT_FILE, dpi=200, bbox_inches="tight", facecolor="white")
+    fig.savefig(OUTPUT_FILE, dpi=200, bbox_inches="tight", transparent=True)
     plt.close(fig)
     size_mb = os.path.getsize(OUTPUT_FILE) / 1e6
 
