@@ -137,7 +137,7 @@ FLOOR_TO_FLOOR_M = 3.5  # meters
 
 # Data paths (relative to model/)
 DATA_DIR = "data"
-BUILDING_STOCK_FILE  = f"{DATA_DIR}/nyc_data.5.12.gpkg"
-NB_PERMITS_FILE      = f"{DATA_DIR}/nb_permits_combined.csv"
+BUILDING_STOCK_FILE  = f"{DATA_DIR}/nyc_bldg_data.4.02.gpkg"
+NB_PERMITS_FILE      = f"{DATA_DIR}/nb_permits_cleaned_04032026.csv"
 DM_PERMITS_FILE      = f"{DATA_DIR}/dm_permits_clean.csv"
 CEMENT_IMPORTS_FILE  = f"{DATA_DIR}/nyc-cement-imports.csv"

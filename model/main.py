@@ -5,12 +5,12 @@ This script orchestrates all three phases and produces output charts.
 
 Output charts
 -------------
-1. Historical stock     — annual concrete stock (m^3) by building type, 2001–2023
-2. Historical carbon    — annual embodied carbon (kgCO2e) from new construction, 2001–2023
+1. Historical stock     — annual concrete stock (m^3) by building type, 2012–2023
+2. Historical carbon    — annual embodied carbon (kgCO2e) from new construction, 2012–2023
 3. Scenario comparison  — BAU vs Buy Clean embodied carbon 2024–2033,
                           with p5/p50/p95 Monte Carlo bands
 4. Carbon avoided       — annual and cumulative kgCO2e avoided under Buy Clean, 2025–2033
-5. Validation           — modelled cement demand vs USGS NYC imports, 2001–2023
+5. Validation           — modelled cement demand vs USGS NYC imports, 2012–2023
 
 Run from the model/ directory:
     python main.py
@@ -45,7 +45,7 @@ BTYPE_COLORS = {
 SCENARIO_COLORS = {"BAU": "#e15759", "BuyClean": "#4e79a7"}
 
 # Create Chart 1: Historical building stock
-def plot_stock(stock_ts: pd.DataFrame, start_year: int = 2001, end_year: int = 2023):
+def plot_stock(stock_ts: pd.DataFrame, start_year: int = 2012, end_year: int = 2023):
     fig, ax = plt.subplots(figsize=(12, 5))
     btypes = ["residential_single_family", "residential_multifamily", "nonresidential"]
 
@@ -69,7 +69,7 @@ def plot_stock(stock_ts: pd.DataFrame, start_year: int = 2001, end_year: int = 2
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:,.0f}"))
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
-    suffix = f"_{start_year}_{end_year}" if (start_year, end_year) != (2001, 2023) else ""
+    suffix = f"_{start_year}_{end_year}" if (start_year, end_year) != (2012, 2023) else ""
     path = os.path.join(OUTPUT_DIR, f"01_historical_stock{suffix}.png")
     fig.savefig(path, dpi=150)
     plt.close(fig)
@@ -91,7 +91,7 @@ def plot_historical_carbon(carbon_ts: pd.DataFrame):
     )
     handles, labels = ax.get_legend_handles_labels()
     ax.legend(handles, [BTYPE_LABELS[b] for b in btypes])
-    ax.set_title("Annual Embodied Carbon — New Construction (2001–2023)", fontsize=14, fontweight="bold")
+    ax.set_title("Annual Embodied Carbon — New Construction (2012–2023)", fontsize=14, fontweight="bold")
     ax.set_xlabel("Year")
     ax.set_ylabel("Embodied Carbon (MtCO₂e)")
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:.2f}"))
@@ -174,7 +174,7 @@ def plot_validation(comparison: pd.DataFrame):
 
     mean_frac = comparison["model_fraction"].mean()
     ax.set_title(
-        f"Modelled Cement Demand vs USGS NYC Imports (2001–2023)\n"
+        f"Modelled Cement Demand vs USGS NYC Imports (2012–2023)\n"
         f"Model captures ~{mean_frac:.1%} of total imports (new construction only)",
         fontsize=13, fontweight="bold",
     )
@@ -209,7 +209,7 @@ def main():
     print("=" * 60)
 
     # Phase 1 — historical
-    print("\n[Phase 1] Historical stock reconstruction (2001–2023)")
+    print("\n[Phase 1] Historical stock reconstruction (2012–2023)")
     p1 = run_phase1()
 
     # Phase 2 — forecast

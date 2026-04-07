@@ -52,7 +52,13 @@ def load_nb_permits() -> pd.DataFrame:
     nb["year"] = pd.to_datetime(nb["Pre- Filing Date"], errors="coerce").dt.year
     nb["volume_m3"] = nb["volume"] * CUFT_TO_CUM
     nb["footprint_area_m2"] = nb["footprint_area_sqft"] * SQFT_TO_SQM
-    
+
+    # normalize column names that vary between data versions
+    if "ownership_type" not in nb.columns and "ownership_type_permits" in nb.columns:
+        nb = nb.rename(columns={"ownership_type_permits": "ownership_type"})
+    if "broad_bldg_type" not in nb.columns and "broad_bldg_type_permits" in nb.columns:
+        nb = nb.rename(columns={"broad_bldg_type_permits": "broad_bldg_type"})
+
     return nb
 
 
