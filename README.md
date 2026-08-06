@@ -3,7 +3,6 @@ A dynamic material flow analysis of embodied carbon from concrete in New York Ci
 
 <p align="center">
   <img width="778" height="624" alt="Screenshot 2026-08-06 at 10 10 30 AM" src="https://github.com/user-attachments/assets/06e7a691-90a7-43c3-8c78-21b5b545452f" /><br/>
-  <em>Figure X. Your caption here.</em>
 </p>
 
 ## Overview
