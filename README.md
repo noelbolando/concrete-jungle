@@ -1,4 +1,4 @@
-<h2 align="center">The Concrete Jungle: Embodied Carbon in NYC's Built Environment</h2>
+<h1 align="center">The Concrete Jungle: Embodied Carbon in NYC's Built Environment</h1>
 
 A dynamic material flow analysis of embodied carbon from concrete in New York City's building sector, evaluating whether New York State's 2025 "Buy Clean Concrete" standard can meaningfully offset upfront emissions as the city continues to grow.
 
