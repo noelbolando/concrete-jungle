@@ -1,18 +1,18 @@
-# The Concrete Jungle: A Dynamic Material Flow and Agent-Based Analysis of Embodied Carbon in New York City's Built Environment
+# The Concrete Jungle: Embodied Carbon in NYC's Built Environment
+A dynamic material flow analysis of embodied carbon from concrete in New York City's building sector, evaluating whether New York State's 2025 "Buy Clean Concrete" standard can meaningfully offset upfront emissions as the city continues to grow.
 
-- EAS 501.074: Sustainable Urban Systems
-- University of Michigan School for the Environment and Sustainability
+<img width="778" height="624" alt="Screenshot 2026-08-06 at 10 10 30 AM" src="https://github.com/user-attachments/assets/06e7a691-90a7-43c3-8c78-21b5b545452f" />
 
-## Research Question: 
-If New York City (NYC) mandates “Buy Clean concrete” standards across all building construction activities across the city, how much embodied carbon could be avoided relative to a business-as-usual (BAU) baseline over 2023-2033?
+## Overview
+Concrete is one of the most carbon-intensive materials by volume, and buildings account for nearly 70% of NYC's total GHG emissions. This project uses a bottom-up Material Flow Analysis (MFA) to quantify concrete accumulation in new building construction across all five boroughs from 2012–2033, and asks: relative to business-as-usual, does a Buy Clean standard reduce upfront emissions in NYC's building sector, and who bears the impact?
 
-## Sustainability Intervention: 
-Using these cleaned datasets, we plan to model the “Buy Clean” policy as the sustainability intervention for reducing embodied carbon across the building sector in NYC. We found that other US cities have implemented similar policies to reduce the consumption of regular concrete, replacing it with green concrete instead. Honolulu started using low-carbon concrete in 2019 by adding on the injection of recycled CO2 from industrial emitters. Houston set their own “Green Action Plan” to reduce greenhouse gas emissions by 80% by 2050, with a focus on the promotion of sustainable building practices. For our intervention, we plan to model the use of green concrete under three penetration scenarios ranging from 10-30% lower CO2 emissions compared to standard concrete, without offsets. Thus, our sustainability intervention will focus on comparing CO2 emissions from conventional concrete used in single-family residential, multifamily residential, and nonresidential buildings, with a forecast of emissions under the adoption of green concrete alternatives in NYC. 
+We built a permit-to-parcel pipeline joining NYC DOB permit data, PLUTO, and building footprints (17,764 buildings) to estimate concrete volume per structure, then applied NRMCA and NYS Buy Clean GWP benchmarks to model embodied carbon under two forecast scenarios (2024–2033): business-as-usual and a 50% Buy Clean intervention.
 
-## Roadmap: 
-We plan to model the embodied carbon in NYC buildings from 2001-2023 and create a ten-year forecast from 2023-2033. Our historical data reconstructs annual cement flows through cement imports into the city and changes in building stock from new construction and demolition. These historical patterns will be used to calibrate a linear regression forecast model which projects future building stock trajectories. We will run our forecast under two scenarios: 
+## Key Findings
+- Buy Clean cuts emissions intensity, not emissions growth. A 50% Buy Clean scenario reduces forecast upfront emissions by ~25% relative to BAU, concentrated in multifamily residential (MFR) construction, but total emissions still rise due to construction volume growth, and are projected to exceed the 2024 baseline by ~2030.
+- Volume eventually dominates over material chemistry. Sensitivity analysis shows GWP reductions matter most early in the forecast window; by the end of the decade, growth in construction volume becomes the primary driver of emissions.
+- Emissions burden is spatially and socioeconomically uneven. Income alone weakly predicts where concrete accumulates (r = 0.102), but Brooklyn and Queens (lower-median-income boroughs) carry the largest share of upfront emissions, while the Bronx shows the highest concentration of high-emissions/low-income census tracts.
+- Static policy isn't enough. We recommend a dynamic Buy Clean framework with scheduled GWP reduction targets (modeled on the Montreal Protocol's phased HFC drawdown), paired with environmental justice safeguards to prevent green concrete mandates from accelerating displacement in vulnerable neighborhoods.
 
-1) business as usual
-2) green cement policies 
-
-The second scenario will be calibrated by reducing the cement intensity per building type by 10-30% penetration rates which simulates low-carbon substitution goals. We plan to use a Monte Carlo simulation to propagate uncertainty through both scenarios, where each of the 1,000 runs per building will draw a cement intensity from the empirical distribution for its building class type, multiply this by gross floor area, and apply a scenario-appropriate emissions factor to yield a building-level embodied carbon estimate. Citywide totals will be summed across all buildings for each run, producing three credible intervals for both scenarios (p5, p50, and p95). We will analyze the degree of overlap between the BAU and green cement output distributions to help us understand the impact of sustainable intervention policies. Final outputs will be integrated into a UI-forward, object-based simulation model representing all NYC buildings with their embodied carbon, allowing others to use this platform for ongoing scenario analysis and policy evaluation for the building sector in NYC. 
+Project Collaborators: Noel Boland, Caroline Cole, Diego Fernandez, Hannah Fishman, Sophie Homan, Willy Mak, Wendy Palomino
+University of Michigan School for the Environment and Sustainability
