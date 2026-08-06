@@ -1,7 +1,10 @@
 # The Concrete Jungle: Embodied Carbon in NYC's Built Environment
 A dynamic material flow analysis of embodied carbon from concrete in New York City's building sector, evaluating whether New York State's 2025 "Buy Clean Concrete" standard can meaningfully offset upfront emissions as the city continues to grow.
 
-<img width="778" height="624" alt="Screenshot 2026-08-06 at 10 10 30 AM" src="https://github.com/user-attachments/assets/06e7a691-90a7-43c3-8c78-21b5b545452f" />
+<p align="center">
+  <img width="778" height="624" alt="Screenshot 2026-08-06 at 10 10 30 AM" src="https://github.com/user-attachments/assets/06e7a691-90a7-43c3-8c78-21b5b545452f" /><br/>
+  <em>Figure X. Your caption here.</em>
+</p>
 
 ## Overview
 Concrete is one of the most carbon-intensive materials by volume, and buildings account for nearly 70% of NYC's total GHG emissions. This project uses a bottom-up Material Flow Analysis (MFA) to quantify concrete accumulation in new building construction across all five boroughs from 2012–2033, and asks: relative to business-as-usual, does a Buy Clean standard reduce upfront emissions in NYC's building sector, and who bears the impact?
