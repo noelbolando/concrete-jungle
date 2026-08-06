@@ -12,8 +12,23 @@ We built a permit-to-parcel pipeline joining NYC DOB permit data, PLUTO, and bui
 
 ## Key Findings
 - Buy Clean cuts emissions intensity, not emissions growth. A 50% Buy Clean scenario reduces forecast upfront emissions by ~25% relative to BAU, concentrated in multifamily residential (MFR) construction, but total emissions still rise due to construction volume growth, and are projected to exceed the 2024 baseline by ~2030.
+
+<p align="center">
+  <img width="624" height="286" alt="Screenshot 2026-08-06 at 10 06 58 AM" src="https://github.com/user-attachments/assets/5bf6dc59-d001-40b2-a91d-8ec922a3cc31" />
+</p>
+
 - Volume eventually dominates over material chemistry. Sensitivity analysis shows GWP reductions matter most early in the forecast window; by the end of the decade, growth in construction volume becomes the primary driver of emissions.
+
+<p align="center">
+  <img width="457" height="331" alt="Screenshot 2026-08-06 at 10 31 02 AM" src="https://github.com/user-attachments/assets/36250f5d-d3af-4948-8108-8d38b2aaff52" />
+</p>
+
 - Emissions burden is spatially and socioeconomically uneven. Income alone weakly predicts where concrete accumulates (r = 0.102), but Brooklyn and Queens (lower-median-income boroughs) carry the largest share of upfront emissions, while the Bronx shows the highest concentration of high-emissions/low-income census tracts.
+
+<p align="center">
+  <img width="527" height="461" alt="Screenshot 2026-08-06 at 10 06 24 AM" src="https://github.com/user-attachments/assets/99bbc89f-4e38-41d9-9794-cf5af28c8a00" />
+</p>
+
 - Static policy isn't enough. We recommend a dynamic Buy Clean framework with scheduled GWP reduction targets (modeled on the Montreal Protocol's phased HFC drawdown), paired with environmental justice safeguards to prevent green concrete mandates from accelerating displacement in vulnerable neighborhoods.
 
 Project Collaborators: Noel Boland, Caroline Cole, Diego Fernandez, Hannah Fishman, Sophie Homan, Willy Mak, Wendy Palomino
