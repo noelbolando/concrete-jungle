@@ -18,4 +18,5 @@ We built a permit-to-parcel pipeline joining NYC DOB permit data, PLUTO, and bui
 - Static policy isn't enough. We recommend a dynamic Buy Clean framework with scheduled GWP reduction targets (modeled on the Montreal Protocol's phased HFC drawdown), paired with environmental justice safeguards to prevent green concrete mandates from accelerating displacement in vulnerable neighborhoods.
 
 Project Collaborators: Noel Boland, Caroline Cole, Diego Fernandez, Hannah Fishman, Sophie Homan, Willy Mak, Wendy Palomino
-University of Michigan School for the Environment and Sustainability
+
+University of Michigan School for the Environment and Sustainability, Spring 2026
