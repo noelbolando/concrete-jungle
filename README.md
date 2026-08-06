@@ -34,5 +34,6 @@ We built a permit-to-parcel pipeline joining NYC DOB permit data, PLUTO, and bui
 
 ## Footnotes:
 - Project Collaborators: Noel Boland, Caroline Cole, Diego Fernandez, Hannah Fishman, Sophie Homan, Willy Mak, Wendy Palomino
+- University of Michigan, School for the Environment and Sustainability (Spring 2026)
 - Check out our report: [Concrete Jungle Final Project Report.pdf](https://github.com/user-attachments/files/30794779/Concrete.Jungle.Final.Project.Report.pdf)
 
