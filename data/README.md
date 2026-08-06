@@ -9,26 +9,3 @@
 | Construction | DOB_Job_Application_Filings_20260316.csv | [NYC Open Data](https://data.cityofnewyork.us/Housing-Development/DOB-Job-Application-Filings/ic3t-wcy2/about_data) | Construction Inflow | 
 | Occupancy | DOB_NOW__Certificate_of_Occupancy_20260312.csv | [NYC Open Data](https://data.cityofnewyork.us/Housing-Development/DOB-NOW-Certificate-of-Occupancy/pkdm-hqz6/about_data) | Construction Inflow - Validation Only |
 | Demolition | *** | [NYC Open Data](https://data.cityofnewyork.us/Housing-Development/NYC-Demolition-Building/j7h9-tb8p/about_data) | Demolition | 
-| USGS-data | myb1-2002-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2003-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2004-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2005-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2006-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2007-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2008-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2009-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2010-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2011-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2012-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2013-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2014-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2015-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2016-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2017-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2018-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2019-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2020-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2021-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2022-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2023-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
-| USGS-data | myb1-2023-cemen.xls | [USGS](https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information) | Cement Imports |
