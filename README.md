@@ -1,6 +1,8 @@
 <h1 align="center">The Concrete Jungle: Embodied Carbon in NYC's Built Environment</h1>
 
-A dynamic material flow analysis of embodied carbon from concrete in New York City's building sector, evaluating whether New York State's 2025 "Buy Clean Concrete" standard can meaningfully offset upfront emissions as the city continues to grow.
+University of Michigan School for the Environment and Sustainability, Spring 2026
+
+A dynamic material flow analysis of embodied carbon from concrete in New York City's building sector, evaluating whether New York State's 2025 "Buy Clean Concrete" standard can meaningfully offset upfront emissions as the city continues to grow. 
 
 <p align="center">
   <img width="778" height="624" alt="Screenshot 2026-08-06 at 10 10 30 AM" src="https://github.com/user-attachments/assets/06e7a691-90a7-43c3-8c78-21b5b545452f" /><br/>
@@ -32,6 +34,7 @@ We built a permit-to-parcel pipeline joining NYC DOB permit data, PLUTO, and bui
 
 - Static policy isn't enough. We recommend a dynamic Buy Clean framework with scheduled GWP reduction targets (modeled on the Montreal Protocol's phased HFC drawdown), paired with environmental justice safeguards to prevent green concrete mandates from accelerating displacement in vulnerable neighborhoods.
 
-Project Collaborators: Noel Boland, Caroline Cole, Diego Fernandez, Hannah Fishman, Sophie Homan, Willy Mak, Wendy Palomino
+## Footnotes:
+- Project Collaborators: Noel Boland, Caroline Cole, Diego Fernandez, Hannah Fishman, Sophie Homan, Willy Mak, Wendy Palomino
+- Check out our report: [Concrete Jungle Final Project Report.pdf](https://github.com/user-attachments/files/30794779/Concrete.Jungle.Final.Project.Report.pdf)
 
-University of Michigan School for the Environment and Sustainability, Spring 2026
