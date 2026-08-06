@@ -15,7 +15,7 @@ This project draws on public datasets spanning municipal permitting records, tax
 | Building Footprint | Section 1904.3 details the minimum compression strength per type of concrete construction | [NYC Building Code 2022](https://up.codes/viewer/new_york_city/nyc-building-code-2022/chapter/19/concrete#19) |
 
 ## Pipeline
-Permits were joined to PLUTO and footprint data to derive per-building dimensions, then classified into three building types — non-residential (NR), multi-family residential (MFR), and single-family residential (SFR). Concrete slab volume was calculated from footprint area × slab thickness × floor count, and converted to embodied carbon using GWP factors weighted by compression strength under both BAU and Buy Clean scenarios. Sample: 17,764 new buildings (2012–2024), matched to 1,760 census tracts (~75% of NYC tracts with construction activity).
+Permits were joined to PLUTO and footprint data to derive per-building dimensions, then classified into three building types: non-residential (NR), multi-family residential (MFR), and single-family residential (SFR). Concrete slab volume was calculated from footprint area × slab thickness × floor count, and converted to embodied carbon using GWP factors weighted by compression strength under both BAU and Buy Clean scenarios. Sample: 17,764 new buildings (2012–2024), matched to 1,760 census tracts (~75% of NYC tracts with construction activity).
 
 <p align="center">
   <img width="441" height="368" alt="Screenshot 2026-08-06 at 10 06 36 AM" src="https://github.com/user-attachments/assets/c8787e4f-d6be-4581-8875-a72af47c2f85" />
